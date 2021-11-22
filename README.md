@@ -11,6 +11,7 @@ pip install -r requirements.txt
 
 ## Download Pretrained Weights
 ````bash
+mkdir ./IFR/pretrained
 cd ./IFR/pretrained
 # download resnet18 imagenet pretrained weight
 wget http://sceneparsing.csail.mit.edu/model/pretrained_resnet/resnet18-imagenet.pth
@@ -60,6 +61,7 @@ bash train.sh
 ## Stage Two Training of Accel
 For example, train Accel18 on 2 GPUs. Checkpoints would saved in ./Accel/work_dirs.
 ````bash
+mkdir ./Accel/work_dirs
 # train Accel18 with baseline model
 cd ./Accel/exp/accel18_30_sup/script
 bash train.sh
