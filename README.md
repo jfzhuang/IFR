@@ -10,8 +10,8 @@ pip install -r requirements.txt
 ```
 
 ## Download Pretrained Weights
-Download imagenet pretrained weights and place them in ./IFR/pretrained
 ````bash
+cd ./IFR/pretrained
 # download resnet18 imagenet pretrained weight
 wget http://sceneparsing.csail.mit.edu/model/pretrained_resnet/resnet18-imagenet.pth
 # download resnet101 imagenet pretrained weight
