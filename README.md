@@ -24,6 +24,15 @@ Your directory tree should be look like this:
 │       └── val
 ````
 
+## Download Pretrained Weights
+Download imagenet pretrained weights and place them in ./IFR/pretrained
+````bash
+# download resnet18 imagenet pretrained weight
+wget http://sceneparsing.csail.mit.edu/model/pretrained_resnet/resnet18-imagenet.pth
+# download resnet101 imagenet pretrained weight
+wget http://sceneparsing.csail.mit.edu/model/pretrained_resnet/resnet101-imagenet.pth
+````
+
 ## Prepare Downsample Dataset
 Generated downsample dataset would be saved in ./data
 ````bash
