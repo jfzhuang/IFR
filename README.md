@@ -9,6 +9,15 @@ The code has been tested on pytorch=1.8.2 and python3.8. Please refer to `requir
 pip install -r requirements.txt
 ```
 
+## Download Pretrained Weights
+Download imagenet pretrained weights and place them in ./IFR/pretrained
+````bash
+# download resnet18 imagenet pretrained weight
+wget http://sceneparsing.csail.mit.edu/model/pretrained_resnet/resnet18-imagenet.pth
+# download resnet101 imagenet pretrained weight
+wget http://sceneparsing.csail.mit.edu/model/pretrained_resnet/resnet101-imagenet.pth
+````
+
 ## Data preparation
 You need to download the [Cityscapes](https://www.cityscapes-dataset.com/) datasets.
 
@@ -22,15 +31,6 @@ Your directory tree should be look like this:
 │   └── leftImg8bit_sequence
 │       ├── train
 │       └── val
-````
-
-## Download Pretrained Weights
-Download imagenet pretrained weights and place them in ./IFR/pretrained
-````bash
-# download resnet18 imagenet pretrained weight
-wget http://sceneparsing.csail.mit.edu/model/pretrained_resnet/resnet18-imagenet.pth
-# download resnet101 imagenet pretrained weight
-wget http://sceneparsing.csail.mit.edu/model/pretrained_resnet/resnet101-imagenet.pth
 ````
 
 ## Prepare Downsample Dataset
