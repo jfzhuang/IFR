@@ -11,7 +11,6 @@ from .. import builder
 from ..builder import SEGMENTORS
 from .base import BaseSegmentor, SemiBaseSegmentor
 from ..losses import accuracy
-from fast_pytorch_kmeans import KMeans
 from torch.distributions.uniform import Uniform
 
 
