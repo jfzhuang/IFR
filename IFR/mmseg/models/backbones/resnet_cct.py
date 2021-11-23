@@ -15,7 +15,7 @@ from ..utils import ResLayer
 class ResNet18(nn.Module):
     def __init__(self, norm_type='sync_batchnorm'):
         super(ResNet18, self).__init__()
-        pretrained = '/data3/zhuangjiafan/semi-vss/mmsegmentation-0.14.0/pretrained/resnet18-imagenet.pth'
+        pretrained = './pretrained/resnet18-imagenet.pth'
         model = ResNetBackbone(backbone='deepbase_resnet18_dilated8', pretrained=pretrained, norm_type=norm_type)
         self.stem = nn.Sequential(model.prefix, model.maxpool)
         self.layer1 = model.layer1
@@ -45,7 +45,7 @@ class ResNet18(nn.Module):
 class ResNet50(nn.Module):
     def __init__(self, norm_type='sync_batchnorm'):
         super(ResNet50, self).__init__()
-        pretrained = '/data3/zhuangjiafan/semi-vss/mmsegmentation-0.14.0/pretrained/resnet50-imagenet.pth'
+        pretrained = './pretrained/resnet50-imagenet.pth'
         model = ResNetBackbone(backbone='deepbase_resnet50_dilated8', pretrained=pretrained, norm_type=norm_type)
         self.stem = nn.Sequential(model.prefix, model.maxpool)
         self.layer1 = model.layer1
@@ -75,7 +75,7 @@ class ResNet50(nn.Module):
 class ResNet101(nn.Module):
     def __init__(self, norm_type='sync_batchnorm'):
         super(ResNet101, self).__init__()
-        pretrained = '/data3/zhuangjiafan/semi-vss/mmsegmentation-0.14.0/pretrained/resnet101-imagenet.pth'
+        pretrained = './pretrained/resnet101-imagenet.pth'
         model = ResNetBackbone(backbone='deepbase_resnet101_dilated8', pretrained=pretrained, norm_type=norm_type)
         self.stem = nn.Sequential(model.prefix, model.maxpool)
         self.layer1 = model.layer1
