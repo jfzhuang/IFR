@@ -3,7 +3,6 @@ cityscapesscripts==2.2.0
 contiguous_params==1.0.0
 lmdb==1.2.1
 matplotlib==3.4.3
-mc==0.0
 numpy==1.20.3
 onnxoptimizer==0.2.6
 onnxruntime==1.9.0
