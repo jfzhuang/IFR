@@ -42,7 +42,7 @@ python tools/data_downsample.py
 ````
 
 ## Stage One Training of Accel
-For example, train image segmentation model on 2 GPUs. Checkpoints would saved in ./IFR/work_dirs.
+For example, train image segmentation model on 2 GPUs. Checkpoints would be saved in ./IFR/work_dirs.
 ````bash
 # train PSP18 baseline model
 cd ./IFR/exp/sup_30_res18/scripts
@@ -59,7 +59,7 @@ bash train.sh
 ````
 
 ## Stage Two Training of Accel
-For example, train Accel18 on 2 GPUs. Checkpoints would saved in ./Accel/work_dirs.
+For example, train Accel18 on 2 GPUs. Checkpoints would be saved in ./Accel/work_dirs.
 ````bash
 mkdir ./Accel/work_dirs
 # train Accel18 with baseline model
