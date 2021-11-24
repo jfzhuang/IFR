@@ -216,7 +216,7 @@ class IFR(SemiBaseSegmentor):
         )
 
         weight_unsup = self.sigmoid_rampup(iter, self.rampup_length)
-        loss['loss_seg_unsup'] = loss_seg_unsup
+        loss['loss_seg_unsup'] = loss_seg_unsup * weight_unsup
         losses.update(add_prefix(loss, 'decode'))
 
         weight_unsup = torch.Tensor([weight_unsup]).to(gt.device)
