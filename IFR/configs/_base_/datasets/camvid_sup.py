@@ -1,8 +1,8 @@
 # dataset settings
-dataset_type = 'CityscapesDataset'
+dataset_type = 'CamVidDataset'
 data_root = 'data/'
 img_norm_cfg = dict(mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
-crop_size = (256, 512)
+crop_size = (200, 240)
 train_pipeline = [
     dict(type='LoadImageFromFile'),
     dict(type='LoadAnnotations'),
@@ -17,7 +17,7 @@ test_pipeline = [
     dict(type='LoadImageFromFile'),
     dict(
         type='MultiScaleFlipAug',
-        img_scale=(1024, 512),
+        img_scale=(480, 360),
         # img_ratios=[0.5, 0.75, 1.0, 1.25, 1.5, 1.75],
         flip=False,
         transforms=[
@@ -34,17 +34,17 @@ data = dict(
     train=dict(
         type=dataset_type,
         data_root=data_root,
-        img_dir='cityscapes/leftImg8bit_sequence_down_2x/train',
-        ann_dir='cityscapes/gtFine_down_2x/train',
-        split='cityscapes/splits/train_sup_1-30.txt',
+        img_dir='CamVid/video_image_down_2x',
+        ann_dir='CamVid/label_down_2x',
+        split='CamVid/splits/trainval_image_1-30.txt',
         pipeline=train_pipeline,
     ),
     val=dict(
         type=dataset_type,
         data_root=data_root,
-        img_dir='cityscapes/leftImg8bit_sequence_down_2x/val',
-        ann_dir='cityscapes/gtFine_down_2x/val',
-        split='cityscapes/splits/val.txt',
+        img_dir='CamVid/video_image_down_2x',
+        ann_dir='CamVid/label_down_2x',
+        split='CamVid/splits/test_image.txt',
         pipeline=test_pipeline,
     ),
 )

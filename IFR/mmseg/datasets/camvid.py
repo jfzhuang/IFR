@@ -48,7 +48,7 @@ class CamVidDataset(CustomDataset):
 
 
 @DATASETS.register_module()
-class CamVidBothDataset(CustomDataset):
+class CamVidSemiDataset(CustomDataset):
     CLASSES = (
         'road',
         'sidewalk',
