@@ -1,5 +1,5 @@
 # IFR
-This repository is released for double-blind submission, which can reproduce the main results (the baseline and our proposed IFR) of the experiment on Cityscapes with 1/30 labeled samples. Experiments on other partition settings and the CamVid dataset can be easily implemented by slightly modifying the config file.
+This repository is the official implementation of "Semi-Supervised Video Semantic Segmentation with Inter-Frame Feature Reconstruction" (accepted by CVPR 2022). It is designed for semi-supervised video semantic segmentation task.
 
 ## Install & Requirements
 The code has been tested on pytorch=1.8.2 and python3.8. Please refer to `requirements.txt` for detailed information.
